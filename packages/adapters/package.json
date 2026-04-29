@@ -1,0 +1,50 @@
+{
+  "name": "@signalql/adapters",
+  "version": "0.1.0",
+  "description": "SignalQL adapter interfaces and minimal CSV, Postgres, ClickHouse, and BigQuery adapters.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": ["dist"],
+  "license": "MIT",
+  "homepage": "https://github.com/signalql/signalql#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/signalql/signalql.git",
+    "directory": "packages/adapters"
+  },
+  "bugs": {
+    "url": "https://github.com/signalql/signalql/issues"
+  },
+  "keywords": [
+    "signalql",
+    "analytics",
+    "adapters",
+    "postgres",
+    "clickhouse",
+    "bigquery",
+    "csv"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@signalql/compiler": "^0.1.0"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build -w @signalql/compiler && node --import tsx test/sql-escape.test.ts && node --import tsx test/adapters.test.ts"
+  },
+  "devDependencies": {
+    "tsx": "^4.7.0"
+  }
+}

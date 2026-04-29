@@ -1,0 +1,19 @@
+{
+  "name": "signalql",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "npm run build -w @signalql/compiler -w @signalql/parser -w @signalql/adapters -w @signalql/sdk -w @signalql/cli -w @signalql/mcp -w @signalql/playground --if-present && npm run docs:build",
+    "test": "npm run test -w @signalql/compiler -w @signalql/parser -w @signalql/adapters -w @signalql/sdk -w @signalql/cli --if-present",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs"
+  },
+  "devDependencies": {
+    "mermaid": "^11.14.0",
+    "typescript": "^5.4.5",
+    "vitepress": "^1.2.3"
+  }
+}

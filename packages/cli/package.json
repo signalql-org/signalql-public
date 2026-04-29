@@ -1,0 +1,44 @@
+{
+  "name": "@signalql/cli",
+  "version": "0.1.0",
+  "description": "SignalQL command-line compiler and Postgres runner.",
+  "type": "module",
+  "bin": {
+    "signalql": "./dist/cli.js"
+  },
+  "files": ["dist"],
+  "license": "MIT",
+  "homepage": "https://github.com/signalql/signalql#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/signalql/signalql.git",
+    "directory": "packages/cli"
+  },
+  "bugs": {
+    "url": "https://github.com/signalql/signalql/issues"
+  },
+  "keywords": [
+    "signalql",
+    "analytics",
+    "cli",
+    "postgres",
+    "query-language"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@signalql/sdk": "^0.1.0",
+    "postgres": "^3.4.4"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "node --import tsx test/cli.test.ts"
+  },
+  "devDependencies": {
+    "tsx": "^4.7.0"
+  }
+}

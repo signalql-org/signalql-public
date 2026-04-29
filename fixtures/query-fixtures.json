@@ -1,0 +1,25 @@
+{
+  "modelVersion": "v0.1",
+  "queries": [
+    {
+      "id": "count_signup_30d",
+      "signalql": "COUNT events FROM events WHERE event_name = \"signup\" DURING LAST 30 DAYS",
+      "notes": "Canonical raw event volume example"
+    },
+    {
+      "id": "daily_views",
+      "signalql": "COUNT events FROM events WHERE event_name = \"view_item\" DURING LAST 14 DAYS GROUP BY DAY",
+      "notes": "Daily bucketing"
+    },
+    {
+      "id": "funnel_signup_activation",
+      "signalql": "FUNNEL \"signup\" THEN \"activated\" FROM events DURING LAST 28 DAYS",
+      "notes": "Two-step funnel"
+    },
+    {
+      "id": "segment_pro_purchase",
+      "signalql": "COUNT users FROM events WHERE properties.plan = \"pro\" AND event_name = \"purchase\" DURING LAST 28 DAYS",
+      "notes": "Segmentation via JSON property + event"
+    }
+  ]
+}

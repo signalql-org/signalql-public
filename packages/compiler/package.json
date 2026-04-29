@@ -1,0 +1,47 @@
+{
+  "name": "@signalql/compiler",
+  "version": "0.1.0",
+  "description": "Reference SignalQL v0.1 parser and Postgres compiler.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/signalql/signalql#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/signalql/signalql.git",
+    "directory": "packages/compiler"
+  },
+  "bugs": {
+    "url": "https://github.com/signalql/signalql/issues"
+  },
+  "keywords": [
+    "signalql",
+    "analytics",
+    "compiler",
+    "postgres",
+    "query-language"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "node --import tsx test/compile.test.ts"
+  },
+  "devDependencies": {
+    "tsx": "^4.7.0"
+  }
+}

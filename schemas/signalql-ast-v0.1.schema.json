@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://signalql.org/schemas/signalql-ast-v0.1.schema.json",
+  "title": "SignalQL AST v0.1",
+  "description": "Abstract syntax tree node types for SignalQL v0.1. Schema version follows language version.",
+  "oneOf": [{ "$ref": "#/$defs/CountQuery" }, { "$ref": "#/$defs/FunnelQuery" }],
+  "$defs": {
+    "TimeWindow": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["kind", "days"],
+          "properties": {
+            "kind": { "const": "last_days" },
+            "days": { "type": "integer", "minimum": 1, "maximum": 366 }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["kind", "start", "end"],
+          "properties": {
+            "kind": { "const": "between" },
+            "start": { "type": "string", "description": "ISO-like timestamp literal string" },
+            "end": { "type": "string" }
+          }
+        }
+      ]
+    },
+    "Predicate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["field", "value"],
+      "properties": {
+        "field": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1,
+          "description": "Path segments, e.g. [\"properties\",\"plan\"]"
+        },
+        "value": { "type": "string" }
+      }
+    },
+    "CountQuery": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "target",
+        "distinct",
+        "source",
+        "where",
+        "during",
+        "groupBy"
+      ],
+      "properties": {
+        "kind": { "const": "count" },
+        "target": { "type": "string", "enum": ["events", "users"] },
+        "distinct": { "type": "boolean" },
+        "source": { "type": "string" },
+        "where": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/Predicate" }
+        },
+        "during": { "$ref": "#/$defs/TimeWindow" },
+        "groupBy": {
+          "anyOf": [{ "type": "null" }, { "type": "string", "const": "day" }]
+        }
+      }
+    },
+    "FunnelQuery": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "source", "steps", "during"],
+      "properties": {
+        "kind": { "const": "funnel" },
+        "source": { "type": "string" },
+        "steps": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 2,
+          "maxItems": 6
+        },
+        "during": { "$ref": "#/$defs/TimeWindow" }
+      }
+    }
+  }
+}

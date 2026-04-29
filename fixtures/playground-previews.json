@@ -1,0 +1,25 @@
+{
+  "count_signup_30d": {
+    "caption": "Illustrative result shape (sample seed)",
+    "columns": ["count"],
+    "rows": [["2"]]
+  },
+  "daily_views": {
+    "caption": "Illustrative result shape (one row per day)",
+    "columns": ["day", "count"],
+    "rows": [
+      ["2026-04-26", "1"],
+      ["2026-04-27", "0"]
+    ]
+  },
+  "funnel_signup_activation": {
+    "caption": "Illustrative funnel row",
+    "columns": ["step_1", "step_2", "conversion_rate"],
+    "rows": [["2", "1", "0.5"]]
+  },
+  "segment_pro_purchase": {
+    "caption": "Illustrative segmented count",
+    "columns": ["count"],
+    "rows": [["1"]]
+  }
+}

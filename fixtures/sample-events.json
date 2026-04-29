@@ -1,0 +1,37 @@
+[
+  {
+    "event_name": "signup",
+    "user_id": "u1",
+    "timestamp": "2026-04-01T10:00:00Z",
+    "properties": { "source": "seo", "plan": "free" },
+    "traits": { "country": "US" }
+  },
+  {
+    "event_name": "activated",
+    "user_id": "u1",
+    "timestamp": "2026-04-02T10:10:00Z",
+    "properties": {},
+    "traits": { "country": "US" }
+  },
+  {
+    "event_name": "signup",
+    "user_id": "u2",
+    "timestamp": "2026-04-03T12:00:00Z",
+    "properties": { "source": "ads", "plan": "pro" },
+    "traits": { "country": "CA" }
+  },
+  {
+    "event_name": "view_item",
+    "user_id": "u2",
+    "timestamp": "2026-04-04T08:00:00Z",
+    "properties": { "sku": "A1", "plan": "pro" },
+    "traits": { "country": "CA" }
+  },
+  {
+    "event_name": "purchase",
+    "user_id": "u2",
+    "timestamp": "2026-04-04T09:00:00Z",
+    "properties": { "amount": 49, "plan": "pro" },
+    "traits": { "country": "CA" }
+  }
+]

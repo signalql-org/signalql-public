@@ -1,0 +1,43 @@
+{
+  "name": "@signalql/mcp",
+  "version": "0.1.0",
+  "description": "SignalQL MCP stdio server for AI analytics workflows.",
+  "type": "module",
+  "bin": {
+    "signalql-mcp": "./dist/server.js"
+  },
+  "files": ["dist"],
+  "license": "MIT",
+  "homepage": "https://github.com/signalql/signalql#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/signalql/signalql.git",
+    "directory": "packages/mcp"
+  },
+  "bugs": {
+    "url": "https://github.com/signalql/signalql/issues"
+  },
+  "keywords": [
+    "signalql",
+    "analytics",
+    "mcp",
+    "model-context-protocol",
+    "postgres"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "@signalql/sdk": "^0.1.0",
+    "postgres": "^3.4.4",
+    "zod": "^3.23.8"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/server.js"
+  }
+}
