@@ -2,7 +2,7 @@
 
 The formal JSON Schema for AST nodes lives in the repository at:
 
-- [`schemas/signalql-ast-v0.1.schema.json`](https://github.com/signalql/signalql/blob/main/schemas/signalql-ast-v0.1.schema.json)
+- [`schemas/signalql-ast-v0.1.schema.json`](https://github.com/signalql-org/signalql-public/blob/main/schemas/signalql-ast-v0.1.schema.json)
 
 **Schema ID:** `https://signalql.org/schemas/signalql-ast-v0.1.schema.json`  
 **Language version:** v0.1 (schema version tracks the spec, not the npm package semver).

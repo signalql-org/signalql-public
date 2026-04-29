@@ -3,7 +3,7 @@
 ## Add grammar context
 
 - Drop [`docs/ai/grammar-pack.md`](../ai/grammar-pack.md) or [`docs/spec/v0.1.md`](../spec/v0.1.md) into Cursor **Docs** or project rules.
-- Pin [`schemas/signalql-ast-v0.1.schema.json`](https://github.com/signalql/signalql/blob/main/schemas/signalql-ast-v0.1.schema.json) when asking the model to emit structured AST JSON.
+- Pin [`schemas/signalql-ast-v0.1.schema.json`](https://github.com/signalql-org/signalql-public/blob/main/schemas/signalql-ast-v0.1.schema.json) when asking the model to emit structured AST JSON.
 
 ## MCP
 

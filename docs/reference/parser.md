@@ -10,7 +10,7 @@ Implementation lives in `@signalql/compiler`; the standalone parser package give
 
 ## Stability expectations
 
-- AST node kinds (`count`, `funnel`) and fields align with [`schemas/signalql-ast-v0.1.schema.json`](https://github.com/signalql/signalql/blob/main/schemas/signalql-ast-v0.1.schema.json).
+- AST node kinds (`count`, `funnel`) and fields align with [`schemas/signalql-ast-v0.1.schema.json`](https://github.com/signalql-org/signalql-public/blob/main/schemas/signalql-ast-v0.1.schema.json).
 - Breaking AST changes require a **spec minor/major** bump and schema revision.
 
 ## Tests

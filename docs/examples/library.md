@@ -2,7 +2,7 @@
 
 Each example lists the **product question**, **SignalQL**, **logical output shape**, and a **compiled Postgres SQL pattern summary**. For exact generated SQL text + params, run the query through the CLI or MCP `run_signalql`.
 
-Dataset assumptions match [`fixtures/seed.sql`](https://github.com/signalql/signalql/blob/main/fixtures/seed.sql).
+Dataset assumptions match [`fixtures/seed.sql`](https://github.com/signalql-org/signalql-public/blob/main/fixtures/seed.sql).
 
 ## Funnel — signup to activation
 
@@ -96,4 +96,4 @@ COUNT users FROM events WHERE properties.plan = "pro" AND event_name = "purchase
 
 ---
 
-These examples are mirrored in [`fixtures/query-fixtures.json`](https://github.com/signalql/signalql/blob/main/fixtures/query-fixtures.json) and the playground presets.
+These examples are mirrored in [`fixtures/query-fixtures.json`](https://github.com/signalql-org/signalql-public/blob/main/fixtures/query-fixtures.json) and the playground presets.

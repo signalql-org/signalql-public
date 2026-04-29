@@ -29,6 +29,9 @@ export default defineConfig({
     },
   },
   themeConfig: {
+    socialLinks: [
+      { icon: "github", link: "https://github.com/signalql-org/signalql-public" },
+    ],
     nav: [
       { text: "Guide", link: "/guide/why-signalql" },
       { text: "Spec", link: "/spec/v0.1" },
